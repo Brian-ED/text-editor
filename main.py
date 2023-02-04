@@ -1,16 +1,23 @@
+
+
 import tkinter as tk
-font = "BQN386 Unicode"
-minFontSize = 20
-maxFontSize = 200
-root = tk.Tk()
-saveFileName = "saveFile.txt"
+from functools import reduce
+import autocorrect as ac
 
-# justify="left"
-text_box = tk.Text(root, font=(font, maxFontSize))
+# Funcs
 
-text_box.pack(expand = True, fill = 'both')
+def rgb(rgb):
+    return "#%02x%02x%02x" % rgb 
 
-size = 1284, 701
+def d():0
+
+def makeMenu(buttons):
+    def f(x,y):
+        if y: x.add_command(label=y[0], command=y[1])
+        else: x.add_separator()
+        return x
+    return reduce(f, buttons, tk.Menu(menubar, tearoff=0))
+
 
 def onResize(event:tk.Event):
     global size
@@ -19,8 +26,9 @@ def onResize(event:tk.Event):
         return
     size = event.width, event.height
 
-def onPress(_):
-    text = text_box.get(1.0,'end')
+def onPress(_):     
+    print(_)   
+    text = text_box.get(1.0,'end-1c')
     with open(saveFileName,'w',encoding="utf-8")as f:
         f.write(text)
     
@@ -41,11 +49,58 @@ def onPress(_):
     print(fontSize)
     text_box.configure(font=(font,max(minFontSize, min(maxFontSize, int(fontSize)))))
 
+def fullScreen():
+    global isFullScreen
+    isFullScreen=not isFullScreen
+    root.attributes("-fullscreen", isFullScreen)
+
+def autoCorrectCmd():
+    correctedText = ac.Speller(lang=lang).autocorrect_sentence(text_box.get(1.0,'end-1c'))
+    with open(saveFileName,'w',encoding="utf-8")as f:
+        f.write(correctedText)
+    text_box.replace(1.0,1000.0, correctedText)
+
+def openMainMenu(_, menuState=None):
+    if menubar.index(1):
+        return menubar.delete(1,10)
+    menubar.add_command(label="return", command=lambda*x:menubar.delete(1,10))
+    menubar.add_cascade(label="Settings", menu=makeMenu([
+        ["Language",d],
+        ["Fullscreen",fullScreen],
+        ["Auto Correct", autoCorrectCmd],
+        [],
+        ["Exit", root.quit]
+    ]))
+
+def altPressed(x):
+    openMainMenu(x, menuState=0)
+
+
+# vars
+font = "BQN386 Unicode"
+size = 1284, 701
+minFontSize = 20
+maxFontSize = 200
+saveFileName = "saveFile.txt"
+lang="en"
+isFullScreen=0
+
+root = tk.Tk()
+
+text_box = tk.Text(root, font=(font, maxFontSize))
+text_box.pack(expand = True, fill = 'both')
+
+menubar = tk.Menu(root)
+
 with open(saveFileName, "r", encoding="utf-8")as f:
     text_box.insert(1.0, f.read())
-onPress('')
+onPress(0)
 
-root.bind('<KeyPress>', onPress)
-root.bind("<Configure>", onResize)
+*map(root.bind, ('<KeyPress-Alt_L>', '<KeyPress>', '<KeyPress-Escape>', '<Configure>'),
+                (altPressed,         onPress,      openMainMenu,        onResize)),
 
+root.config(menu=menubar, background=rgb((12,31,200)))
 root.mainloop()
+
+# Get selected text
+# text_box.selection_get()

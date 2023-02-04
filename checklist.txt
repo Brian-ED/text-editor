@@ -1,0 +1,6 @@
+Language autocorrection (hopefully by select)
+copy paste and cut
+dark mode
+fix zoom glitch when changing window width, by just adding c^2+ and just find c by trial and error
+settings file with language, ?undo history? and other settinsg 
+
