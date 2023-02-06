@@ -1,0 +1,12 @@
+Language autocorrection (hopefully by select)
+copy paste and cut
+dark mode
+fix zoom glitch when changing window width, by just adding c^2+ and just find c by trial and error
+setting file with ?undo history? and other settinsg 
+save window size and location
+
+# might overcomplicaate
+move file from one location to another (maybe holding alt while hovering over selected file)
+
+# decided not to add
+save preffered language
