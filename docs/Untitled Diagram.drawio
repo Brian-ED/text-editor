@@ -1,17 +1,11 @@
-<mxfile host="app.diagrams.net" modified="2023-02-15T14:54:18.390Z" agent="5.0 (Windows)" etag="eR1x-NOFbL5RCPeM3c-n" version="20.8.13" type="github">
+<mxfile host="app.diagrams.net" modified="2023-02-15T16:51:24.234Z" agent="5.0 (Windows)" etag="Ey4aYA6uP0aQH16B6IJA" version="20.8.13" type="github">
   <diagram id="C5RBs43oDa-KdzZeNtuy" name="Page-1">
     <mxGraphModel dx="794" dy="404" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="WIyWlLk6GJQsqaUBKTNV-0" />
         <mxCell id="WIyWlLk6GJQsqaUBKTNV-1" parent="WIyWlLk6GJQsqaUBKTNV-0" />
-        <mxCell id="M2OSVDVsZNhDemcJk5F3-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="WIyWlLk6GJQsqaUBKTNV-3" target="M2OSVDVsZNhDemcJk5F3-0">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
         <mxCell id="WIyWlLk6GJQsqaUBKTNV-3" value="&lt;div&gt;Tá brúgari skrivar ein bokstav.&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;glass=0;strokeWidth=1;shadow=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
           <mxGeometry x="160" y="80" width="120" height="40" as="geometry" />
-        </mxCell>
-        <mxCell id="M2OSVDVsZNhDemcJk5F3-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="M2OSVDVsZNhDemcJk5F3-0" target="M2OSVDVsZNhDemcJk5F3-1">
-          <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="M2OSVDVsZNhDemcJk5F3-0" value="&lt;div&gt;Skriv tekst til fíl.&lt;/div&gt;&lt;div style=&quot;display:none&quot; id=&quot;SDCloudData&quot;&gt;,&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
           <mxGeometry x="160" y="150" width="120" height="30" as="geometry" />
@@ -19,11 +13,17 @@
         <mxCell id="M2OSVDVsZNhDemcJk5F3-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="M2OSVDVsZNhDemcJk5F3-1" target="M2OSVDVsZNhDemcJk5F3-6">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="M2OSVDVsZNhDemcJk5F3-1" value="&lt;div&gt;skift stødd á tekstin anopá mongdin av bókstavum á longstu linju.&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
-          <mxGeometry x="145" y="220" width="150" height="50" as="geometry" />
+        <mxCell id="M2OSVDVsZNhDemcJk5F3-1" value="&lt;div&gt;skift stødd á tekstin anopá x og y við frimilin:&lt;/div&gt;&lt;div&gt;y/1276/x*30000&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="145" y="280" width="150" height="70" as="geometry" />
         </mxCell>
-        <mxCell id="M2OSVDVsZNhDemcJk5F3-6" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
-          <mxGeometry x="160" y="300" width="120" height="60" as="geometry" />
+        <mxCell id="M2OSVDVsZNhDemcJk5F3-6" value="skift stødd av tekst" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="160" y="370" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="M2OSVDVsZNhDemcJk5F3-11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="M2OSVDVsZNhDemcJk5F3-9" target="M2OSVDVsZNhDemcJk5F3-1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="M2OSVDVsZNhDemcJk5F3-9" value="&lt;div&gt;x = stødd á window&lt;/div&gt;&lt;div&gt;y = longd á tí longstu linju av tekst&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="120" y="200" width="200" height="60" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
