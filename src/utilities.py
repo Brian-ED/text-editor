@@ -1,15 +1,20 @@
 import yaml
-from functools import reduce
-import autocorrect as ac
+
+def br(x,y):
+    return ''.join(map(str,x[::2]+[i for i in y if i>0]))
 
 def rgb(rgb):
     return "#%02x%02x%02x" % rgb 
 
 def nothing():0
 
-def Map(func,*values):
-    length = min(len(i) for i in values if hasattr(i,"__len__"))
-    return *map(func, *[i if hasattr(i, "__iter__") else (i,)*length for i in values]),
+def Map(func):
+    def f(*values):
+        lengths = [len(i) for i in values if hasattr(i,"__len__")]
+        assert max(lengths) == min(lengths), "Map values have to be scaler or iterables, where all iterables are equal length."
+        length = max(lengths)
+        return *map(func, *[i if hasattr(i, "__iter__") else (i,)*length for i in values]),
+    return f
 # print(Map(lambda x,y:x+y, (1,2,3,4),1))
 # (2, 3, 4, 5)
 

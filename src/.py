@@ -1,22 +1,25 @@
-import tkinter as tk
-from tkinter.font import Font
 
-root = tk.Tk()
-txt="hellooo world"
-t_Font = Font(family='Georgia', size=17)
+def s(f,roots):
+    # cubic polynomial or higher
+    # use newton's method to find roots
+    for x0 in range(-100, 100):
+        if not (-100 < f(x0) < 100):
+            continue
+        for i in range(100):
+            y = (f^1)(x0)
 
-lines = 20
-# +4 to include the width of the border (default 1) and padding (default 1)
-border = 1
-padding = 1
-widthpadding = border*2+padding*2
-frame = tk.Frame(root, width=t_Font.measure(txt)+widthpadding, height=200)
-frame.pack()
+        if abs(y) < 0.001:
+            break             
+        x1 = x0 - f(x0) / y           
+        if abs(x1 - x0) <= 0.001:
+            roots += [round(x1, 4)]
+        x0 = x1
 
-# put text box inside the frame
-t = tk.Text(frame, font=t_Font)
-t.insert(1.0, txt)
-t.place(relwidth=1, relheight=1) # fill the available space of the frame
-
-
-root.mainloop()
+# f(x)=0.5 x-0.2+2 x^(2)+x^(3)
+# -1.613
+# -0.5951
+#  0.2083
+def f(x):return 0.5*x-0.2+2*x**2+x**3
+roots=[]
+s(f,roots)
+print(roots)

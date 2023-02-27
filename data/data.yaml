@@ -1,11 +1,11 @@
 window:
   size: !!python/tuple
-  - 1002
-  - 754
+  - 1016
+  - 535
   pos: !!python/tuple
-  - 363
-  - 111
+  - 274
+  - 220
   fullScreen: false
-  background: black
-  foreground: white
-  titleBar: true
+  background: white
+  foreground: black
+  titleBar: false

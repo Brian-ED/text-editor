@@ -1,12 +1,33 @@
-Language autocorrection (hopefully by select)
-copy paste and cut
-dark mode
-fix zoom glitch when changing window width, by just adding c^2+ and just find c by trial and error
-setting file with ?undo history? and other settinsg 
-save window size and location
+✅ Language autocorrection (hopefully by select)
+✅ copy paste and cut
+✅ dark mode
+✅ fix zoom glitch when changing window width
+✅ save window size and location
+✅ Undo
+
+Each tab has it's own settings that, if set, overwrite main tab's settings. 
+    allows tabs with diffeerent settings which is nice.
+    Data file's default value for other tabs's settings
+
+add push tab to top option
+
+recently moved language gets moved to top
+able to move screen
+being able to move tab even while top bar is gone
+
+# accecibility
+able to keep top bar. (removes return)
+more shortcuts, I.e. ctrl-f for full screen, 
 
 # might overcomplicaate
 move file from one location to another (maybe holding alt while hovering over selected file)
+setting file with ?undo history? and other settinsg 
+
 
 # decided not to add
 save preffered language
+
+
+
+# considerations
+being able to use mouse for everything except typing for ease of use.

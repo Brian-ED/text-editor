@@ -1,0 +1,1 @@
+CreateObject("Wscript.Shell").Run "textEditor.bat", 0, True
