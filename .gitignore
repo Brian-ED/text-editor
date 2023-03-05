@@ -1,4 +1,9 @@
+# File created by python
 src/__pycache__
-data
+
+# Locally saved data 
+data/*
+
+# Testing files
 .bqn
 .py

@@ -1,3 +1,4 @@
+import os
 import yaml
 
 def br(x,y):
@@ -84,6 +85,8 @@ def write(fAsStr):
 # path argument is just a list of indexes, so data["hi"]["hello"] is the same as makeData(filePath, ("hi","hello"), defaults)
 class makeData:
     def __init__(s, filePath:str, path=(), defaults:list[list[list,dict]]=[]):
+        if not os.path.exists(filePath):
+            with open(filePath, "w") as f:f.write("{}")
         s.filePath = filePath
         s.path = tuple(path)
         s.defaults = defaults
