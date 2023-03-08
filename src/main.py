@@ -1,6 +1,5 @@
 import tkinter as tk
 from tkinter.font import Font
-import autocorrect as ac
 import os
 import yaml
 
@@ -156,7 +155,6 @@ def fullScreen():
         window.overrideredirect(0)
     window.attributes("-fullscreen", not isFullScreen)
     data["window"]["fullScreen"] = not isFullScreen
-    openMainMenu()
 
 def darkModeToggle():
     if data["window", "background"] == "black":
@@ -166,13 +164,10 @@ def darkModeToggle():
         data["window"]["background"] = "black"
         data["window"]["foreground"] = "white"
     text_box.configure(insertbackground=data["window"]["foreground"], background = data["window"]["background"], foreground = data["window"]["foreground"])
-    openMainMenu()
 
 def toggleTitleBar():
     data["window"]["titleBar"] = not data["window"]["titleBar"]
     window.overrideredirect(data["window"]["titleBar"])
-    openMainMenu()
-
 
 def moveCurserUp(_):
     #  window.event_generate("<Motion>", warp = True, x = 50, y = 50)
@@ -184,7 +179,11 @@ def showRightClickMenu(e:tk.Event):
     rightClickMenu.entryconfigure("Paste", command = lambda: e.widget.event_generate("<<Paste>>"))
     rightClickMenu.tk.call("tk_popup", rightClickMenu, e.x_root, e.y_root)
 
-# general saved data 
+# general saved data
+if not  os.path.exists("../data"):
+    os.mkdir("../data")
+    with open("../data/data.yaml","w")as f:
+        f.write("{}")
 data = makeData(r"../data/data.yaml", (), [
     [["window"], {
         "size"      :(1284, 701),
