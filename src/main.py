@@ -3,14 +3,6 @@ from tkinter.font import Font
 import os
 import yaml
 
-def br(x,y):
-    return ''.join(map(str,x[::2]+[i for i in y if i>0]))
-
-def rgb(rgb):
-    return "#%02x%02x%02x" % rgb 
-
-def nothing():0
-
 def Map(func):
     def f(*values):
         lengths = [len(i) for i in values if hasattr(i,"__len__")]
@@ -119,7 +111,7 @@ def resetYaml(yamlFilePath):
 def addButton(widget:tk.Menu, label, command):
     widget.add_command(label = label, command = command)
 
-def toggleWrap():
+def toggleWrap(*_):
     data["window"]["wrap"]
 
 # Buttons / widgets
@@ -223,7 +215,7 @@ with open(SAVE_FILE, "r", encoding = "utf-8")as f:
 onPress()
 
 
-topMenuBar  = tk.Menu(menubar,    tearoff = 0)
+topMenuBar = tk.Menu(menubar,    tearoff = 0)
 Map(addButton)(topMenuBar,
     ("↩", "Dark mode toggle", "Fullscreen", "toggle title bar"),
     (lambda:0, darkModeToggle,    fullScreen,  toggleTitleBar)
@@ -232,11 +224,10 @@ topMenuBar.add_separator()
 addButton(topMenuBar, "Exit", window.quit)
 menubar.add_cascade(label = "⛭", menu = topMenuBar)
 
-*map(window.bind, ("<KeyPress>", "<Configure>", "<Control-g>"),
-                  ( onPress,      onResize,      moveCurserUp)),
+*map(window.bind, ("<KeyPress>", "<Configure>"), # "<Control-g>"
+                  ( onPress,      onResize,   )), # moveCurserUp
 
 a = tk.Listbox(window, selectmode = "multiple")
 
 window.config(menu = menubar)
-window.configure(bg='black', highlightbackground='black')
 window.mainloop()
