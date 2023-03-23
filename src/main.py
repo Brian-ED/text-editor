@@ -131,7 +131,6 @@ def onResize(event:tk.Event):
     data["window"]["pos"] = pos
 
 def onPress(_ = 0):
-    print("hi")
     text = text_box.get(1.0, "end-1c")
     longestLine = max(1, *map(measureFont.measure, text.split("\n")))
     
