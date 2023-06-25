@@ -201,6 +201,7 @@ measureFont = Font(family = FONT, size = 25)
 rightClickMenu = tk.Menu(window, tearoff = 0)
 Map(addButton)(rightClickMenu, ["Cut", "Copy", "Paste"], lambda:0)
 
+# TODO make wrap be an option
 text_box = tk.Text(window, undo = True, wrap = "none", font = font, insertbackground=data["window"]["foreground"], background = data["window"]["background"], foreground = data["window"]["foreground"])
 text_box.pack(side = "left", expand = True, fill = "both")
 text_box.bind_class("Entry", "<Button-3><ButtonRelease-3>", showRightClickMenu)
@@ -218,7 +219,7 @@ onPress()
 topMenuBar = tk.Menu(menubar,    tearoff = 0)
 Map(addButton)(topMenuBar,
     ("↩", "Dark mode toggle", "Fullscreen", "toggle title bar"),
-    (lambda:0, darkModeToggle,    fullScreen,  toggleTitleBar)
+    (lambda:0, darkModeToggle, fullScreen,   toggleTitleBar)
 )
 topMenuBar.add_separator()
 addButton(topMenuBar, "Exit", window.quit)

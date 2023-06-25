@@ -7,15 +7,15 @@ def Map(func,*values):
 def addButton(widget, label, command):
     widget.add_command(label=label, command=command)
 
-addButton(langaugeBar, "English"   ,getLang("en")),
-addButton(languageBar, "Polish"    ,getLang("pl")),
-addButton(languageBar, "Turkish"   ,getLang("tr")),
-addButton(languageBar, "Russian"   ,getLang("ru")),
-addButton(languageBar, "Ukranian"  ,getLang("uk")),
-addButton(languageBar, "Czech"     ,getLang("cs")),
-addButton(languageBar, "Portuguese",getLang("pt")),
-addButton(languageBar, "Greek"     ,getLang("el")),
-addButton(languageBar, "Italian"   ,getLang("it")),
-addButton(languageBar, "Vietnamese",getLang("vi")),
-addButton(languageBar, "French"    ,getLang("fr")),
-addButton(languageBar, "Spanish"   ,getLang("es")),
+addButton(langaugeBar, "English"   , getLang("en"))
+addButton(languageBar, "Polish"    , getLang("pl"))
+addButton(languageBar, "Turkish"   , getLang("tr"))
+addButton(languageBar, "Russian"   , getLang("ru"))
+addButton(languageBar, "Ukranian"  , getLang("uk"))
+addButton(languageBar, "Czech"     , getLang("cs"))
+addButton(languageBar, "Portuguese", getLang("pt"))
+addButton(languageBar, "Greek"     , getLang("el"))
+addButton(languageBar, "Italian"   , getLang("it"))
+addButton(languageBar, "Vietnamese", getLang("vi"))
+addButton(languageBar, "French"    , getLang("fr"))
+addButton(languageBar, "Spanish"   , getLang("es"))
